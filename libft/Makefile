@@ -6,7 +6,7 @@
 #    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 10:23:54 by eochoa-d          #+#    #+#              #
-#    Updated: 2022/12/05 20:15:52 by asirodri         ###   ########.fr        #
+#    Updated: 2022/12/07 20:21:35 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,11 @@ LIB			=	ft_isalpha.c	\
 				ft_strrchr.c	\
 				ft_strncmp.c	\
 				ft_memchr.c		\
+				ft_memcmp.c		\
+				ft_strnstr.c	\
+				ft_atoi.c		\
+				ft_calloc.c		\
+				ft_strdup.c		\
 
 
 #	Objects
