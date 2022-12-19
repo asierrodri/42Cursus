@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 10:23:54 by eochoa-d          #+#    #+#              #
-#    Updated: 2022/12/18 21:21:14 by marvin           ###   ########.fr        #
+#    Updated: 2022/12/19 17:47:53 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,8 @@ LIB			=	ft_isalpha.c	\
 				ft_substr.c		\
 				ft_strjoin.c	\
 				ft_strtrim.c	\
+				ft_split.c		\
 				ft_itoa.c		\
-				ft_intlen.c		\
 				ft_strmapi.c	\
 				ft_striteri.c	\
 				ft_putchar_fd.c	\
