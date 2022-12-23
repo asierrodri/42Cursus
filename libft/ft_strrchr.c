@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:33:00 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/05 19:46:27 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:18:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,12 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (&str[i]);
 }
+
+/* int	main(void)
+{
+	char	*str = "hola Mundo";
+	int		c = 'j';
+	printf("%s\n", ft_strrchr(str, c));
+	printf("%s\n", strrchr(str, c));
+	return (0);
+} */

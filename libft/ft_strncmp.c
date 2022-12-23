@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:50:56 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/05 20:01:28 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:17:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			i++;
 	return (str1[i] - str2[i]);
 }
+
+/* int	main(void)
+{
+	char	*str1 = "hola Mundo";
+	char	*str2 = NULL;
+	size_t	n = 5;
+	printf("%d", ft_strncmp(str1, str2, n));
+	printf("%d", strncmp(str1, str2, n));
+}
+ */

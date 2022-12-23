@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 18:56:11 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/05 19:03:14 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:19:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,11 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+/* int	main(void)
+{
+	int c = 'A';
+	char s = ft_tolower(c);
+	printf("%c\n", s);
+	return (0);
+} */

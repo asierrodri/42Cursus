@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 18:52:18 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/03 18:55:39 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:13:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,11 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+
+/* int	main(void)
+{
+	int	c = '\t';
+	printf("%d\n", ft_isascii(c));
+	return (0);
+}
+ */

@@ -3,31 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 20:32:09 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/19 20:09:15 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 16:49:07 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include "ft_strlen.c"
-#include "ft_memcpy.c"
-#include "ft_strdup.c"
-#include "ft_substr.c"
 
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-char	*ft_strdup(const char *s1);
-char	*ft_substr(char const *s, unsigned int start, size_t len);*/
-
-char	**ft_split(char const *s, char c)
+size_t	ft_mallocsize(char const *s, char c)
 {
-	char	**tab;
 	size_t	i;
 	size_t	pos;
-	size_t	j;
-	size_t	start;
 
 	if (s == NULL)
 		return (0);
@@ -42,9 +30,16 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	tab = (char **)malloc((pos + 1) * sizeof(char *));
-	if (!tab || s == NULL)
-		return (0);
+	return (pos);
+}
+
+char	**ft_tab(char const *s, char **tab, char c)
+{
+	size_t	i;
+	size_t	pos;
+	size_t	start;
+	size_t	j;
+
 	i = 0;
 	pos = 0;
 	while (s[i])
@@ -66,6 +61,16 @@ char	**ft_split(char const *s, char c)
 	}
 	tab[pos] = NULL;
 	return (tab);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+
+	tab = (char **)malloc((ft_mallocsize(s, c) + 1) * sizeof(char *));
+	if (!tab || s == NULL)
+		return (0);
+	return (ft_tab(s, tab, c));
 }
 
 /*int	main(void)

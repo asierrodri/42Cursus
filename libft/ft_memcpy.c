@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 19:40:57 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/04 19:56:07 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:15:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,16 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (d);
 }
+
+/* int	main(void)
+{
+	char		dest[] = "aaaaa";
+	const char	src[] = "hhhhhhhazzzz";
+	size_t		n = 20;
+	char		*str = ft_memcpy(dest, src, n);
+	char		*s = memcpy(dest, src, n);
+	printf("%s\n", str);
+	printf("%s\n", s);
+	return (0);
+}
+ */

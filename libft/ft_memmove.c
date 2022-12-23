@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 19:59:24 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/04 21:34:03 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:15:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (d);
 }
+
+/* int	main(void)
+{
+	char		dest[] = "aaaaaaaaaaaaaaaaaaaaaaaaa";
+	const char	src[] = "hhhhhhhazzzz";
+	size_t		n = 4;
+	char		*str = ft_memmove(dest, src, n);
+	char		*s = memmove(dest, src, n);
+	printf("%s\n", str);
+	printf("%s\n", s);
+	return (0);
+} */

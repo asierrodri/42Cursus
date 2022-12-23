@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 19:11:11 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/07 19:36:49 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:18:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+
+/* int	main(void)
+{
+	char	*str1 = "hola Mundo";
+	char	*str2 = "";
+	size_t	n = 20;
+	printf("%s", ft_strnstr(str1, str2, n));
+	printf("%s", strnstr(str1, str2, n));
+} */

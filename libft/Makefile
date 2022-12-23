@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 10:23:54 by eochoa-d          #+#    #+#              #
-#    Updated: 2022/12/19 17:47:53 by asirodri         ###   ########.fr        #
+#    Updated: 2022/12/23 17:21:05 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ LIB			=	ft_isalpha.c	\
 				ft_putchar_fd.c	\
 				ft_putstr_fd.c	\
 				ft_putendl_fd.c	\
+				ft_putnbr_fd.c	\
 
 
 #	Objects

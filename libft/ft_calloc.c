@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 19:57:18 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/07 20:10:23 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:00:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,16 @@ void	*ft_calloc(size_t count, size_t size)
 		str[i++] = '\0';
 	return (str);
 }
+
+/* int	main(void)
+{
+	size_t	count = 20;
+	size_t	size = 2;
+	char	*str;
+	char	*s;
+	str = ft_calloc(count, size);
+	s = calloc(count, size);
+	printf("%s\n", str);
+	printf("%s\n", s);
+	return (0);
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 18:56:27 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/03 19:00:16 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:14:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,10 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+
+/* int	main(void)
+{
+	int	c = '*';
+	printf("%d\n", ft_isprint(c));
+	return (0);
+} */

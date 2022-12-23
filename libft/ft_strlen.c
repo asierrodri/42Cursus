@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 19:31:12 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/03 19:37:11 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:17:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,11 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+/* int	main(void)
+{
+	char	*str = "HOLA MUNDO";
+	printf("%zu", ft_strlen(str));
+	printf("%zu", strlen(str));
+	return (0);
+} */
