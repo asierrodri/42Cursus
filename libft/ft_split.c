@@ -55,8 +55,7 @@ char	**ft_tab(char const *s, char **tab, char c)
 				i++;
 				j++;
 			}
-			tab[pos] = ft_substr(s, start, j);
-			pos++;
+			tab[pos++] = ft_substr(s, start, j);
 		}
 	}
 	tab[pos] = NULL;

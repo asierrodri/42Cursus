@@ -16,7 +16,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	i;
-	size_t	j;
 
 	if (!s)
 		return (0);
@@ -28,17 +27,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!str)
 		return (0);
 	i = 0;
-	j = 0;
-	while (s[i] != '\0')
+	while (i < len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[i] = s[start];
 		i++;
+		start++;
 	}
-	str[j] = '\0';
+	str[i] = '\0';
 	return (str);
 }
 
