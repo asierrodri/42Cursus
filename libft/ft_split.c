@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 20:32:09 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/28 17:24:58 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/28 19:45:38 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 
+	if (s == NULL)
+		return (0);
 	tab = (char **)malloc((ft_mallocsize(s, c) + 1) * sizeof(char *));
-	if (!tab || s == NULL)
+	if (!tab)
 		return (0);
 	return (ft_tab(s, tab, c));
 }
