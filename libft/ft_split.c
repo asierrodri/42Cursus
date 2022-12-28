@@ -6,13 +6,13 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 20:32:09 by asirodri          #+#    #+#             */
-/*   Updated: 2022/12/28 17:13:26 by asirodri         ###   ########.fr       */
+/*   Updated: 2022/12/28 17:24:58 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_mallocsize(char const *s, char c)
+static size_t	ft_mallocsize(char const *s, char c)
 {
 	size_t	i;
 	size_t	pos;
@@ -33,7 +33,7 @@ size_t	ft_mallocsize(char const *s, char c)
 	return (pos);
 }
 
-char	**ft_tab(char const *s, char **tab, char c)
+static char	**ft_tab(char const *s, char **tab, char c)
 {
 	size_t	i;
 	size_t	pos;
