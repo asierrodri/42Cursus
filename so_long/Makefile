@@ -6,7 +6,7 @@
 #    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:14:23 by asirodri          #+#    #+#              #
-#    Updated: 2023/03/14 19:15:46 by asirodri         ###   ########.fr        #
+#    Updated: 2023/03/16 19:42:01 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ OBJ   =  so_long.c
 GAME  =  game/ft_get_images.c 			\
 		 game/ft_print_game.c			\
 		 game/ft_start_game.c			\
+		 game/ft_movement.c				\
 
 ERROS  = errors/ft_check_ber.c 			\
 		 errors/ft_check_parameters.c 	\
@@ -31,6 +32,7 @@ UTILS  = utils/ft_memcpy.c 				\
 		 utils/ft_strjoin.c				\
 		 utils/ft_strlen.c				\
 		 utils/ft_substr.c				\
+		 utils/ft_itoa.c				\
 		
 MLX		= minilibx/libmlx.a
 
