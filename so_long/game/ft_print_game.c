@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 19:13:36 by asirodri          #+#    #+#             */
-/*   Updated: 2023/03/14 19:18:52 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/06 19:37:31 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	ft_put_img(char c, t_game *game, int i, int j)
 
 void	ft_print_game(t_game *game)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = -1;
 	while (++i < game->y)

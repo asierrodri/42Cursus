@@ -14,8 +14,8 @@
 
 int	ft_check_parameters(t_game *game)
 {
-	int	y;
-	int	x;
+	unsigned int	y;
+	unsigned int	x;
 
 	y = 1;
 	game->player = 0;
@@ -34,14 +34,15 @@ int	ft_check_parameters(t_game *game)
 		}
 		y++;
 	}
-	ft_save_parameters(game);
+	ft_save_player(game);
+	ft_save_enemy(game);
 	return (0);
 }
 
-void	ft_save_parameters(t_game *game)
+void	ft_save_player(t_game *game)
 {
-	int	y;
-	int	x;
+	unsigned int	y;
+	unsigned int	x;
 
 	y = 1;
 	while (game->map[y])
@@ -59,6 +60,29 @@ void	ft_save_parameters(t_game *game)
 				game->exit++;
 			if (game->map[y][x] == 'C')
 				game->collectible++;
+			x++;
+		}
+		y++;
+	}
+}
+
+void	ft_save_enemy(t_game *game)
+{
+	unsigned int	y;
+	unsigned int	x;
+
+	y = 1;
+	while (game->map[y])
+	{
+		x = 1;
+		while (x != game->x)
+		{
+			if (game->map[y][x] == 'X')
+			{
+				game->enemyx = x;
+				game->enemyy = y;
+				return ;
+			}
 			x++;
 		}
 		y++;

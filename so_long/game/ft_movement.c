@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:50:48 by asirodri          #+#    #+#             */
-/*   Updated: 2023/03/16 18:56:46 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/06 17:37:23 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	ft_move_up(t_game *game)
 		game->map[game->beginy][game->beginx] = '0';
 		game->map[--game->beginy][game->beginx] = 'P';
 		game->move++;
+		if (game->collectible == 0)
+			ft_mlx_xpm_file_to_img(&game->imgs.x, "./imgs/enemy2.xpm", game);
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
@@ -45,6 +47,8 @@ void	ft_move_down(t_game *game)
 		game->map[game->beginy][game->beginx] = '0';
 		game->map[++game->beginy][game->beginx] = 'P';
 		game->move++;
+		if (game->collectible == 0)
+			ft_mlx_xpm_file_to_img(&game->imgs.x, "./imgs/enemy2.xpm", game);
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
@@ -67,6 +71,8 @@ void	ft_move_right(t_game *game)
 		game->map[game->beginy][game->beginx] = '0';
 		game->map[game->beginy][++game->beginx] = 'P';
 		game->move++;
+		if (game->collectible == 0)
+			ft_mlx_xpm_file_to_img(&game->imgs.x, "./imgs/enemy2.xpm", game);
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
@@ -89,6 +95,8 @@ void	ft_move_left(t_game *game)
 		game->map[game->beginy][game->beginx] = '0';
 		game->map[game->beginy][--game->beginx] = 'P';
 		game->move++;
+		if (game->collectible == 0)
+			ft_mlx_xpm_file_to_img(&game->imgs.x, "./imgs/enemy2.xpm", game);
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')

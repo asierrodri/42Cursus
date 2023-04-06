@@ -1,52 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_limits.c                                  :+:      :+:    :+:   */
+/*   ft_check_collectible.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 20:27:00 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 19:37:04 by asirodri         ###   ########.fr       */
+/*   Created: 2023/04/06 13:59:33 by asirodri          #+#    #+#             */
+/*   Updated: 2023/04/06 19:38:04 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	ft_check_1(t_game *game, unsigned int x, unsigned int y)
-{
-	while (x > 0)
-	{
-		if (game->map[y - 1][x - 1] != '1')
-			return (1);
-		x--;
-	}
-	while (y > 0)
-	{
-		if (game->map[y - 1][x] != '1')
-			return (1);
-		y--;
-	}
-	return (0);
-}
-
-int	ft_check_limits(t_game *game)
+int	ft_check_collectible(t_game *game)
 {
 	unsigned int	y;
 	unsigned int	x;
 
-	y = 0;
-	x = 0;
-	while (x != game->x)
+	y = 1;
+	while (game->map2[y])
 	{
-		if (game->map[y][x] != '1')
-			return (1);
-		x++;
-	}
-	while (y != game->y)
-	{
-		if (game->map[y][x - 1] != '1')
-			return (1);
+		x = 1;
+		while (x < game->x)
+		{
+			if (game->map2[y][x] == 'C')
+			{
+				free(game->map2);
+				return (1);
+			}
+			x++;
+		}
 		y++;
 	}
-	return (ft_check_1(game, x, y));
+	free(game->map2);
+	return (0);
 }

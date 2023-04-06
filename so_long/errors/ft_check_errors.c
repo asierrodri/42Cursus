@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 19:05:37 by asirodri          #+#    #+#             */
-/*   Updated: 2023/03/14 18:01:33 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/06 14:23:11 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ int	ft_check_errors(t_game *game)
 		return (write(1, "Collectible Error\n", 19));
 	if (ft_flood_fill(game) == 1)
 		return (write(1, "Black Hole Error\n", 18));
+	if (ft_check_collectible(game) == 1)
+		return (write(1, "Take Collectible Error\n", 24));
 	return (0);
 }

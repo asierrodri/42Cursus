@@ -6,15 +6,15 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 19:27:52 by asirodri          #+#    #+#             */
-/*   Updated: 2023/03/02 19:29:07 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/06 19:31:43 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-size_t	ft_strlen(const char *s)
+unsigned int	ft_strlen(const char *s)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')

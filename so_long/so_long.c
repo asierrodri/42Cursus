@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:44:54 by asirodri          #+#    #+#             */
-/*   Updated: 2023/03/16 19:28:42 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/06 16:46:08 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 #include "errors/ft_check_limits.c"
 #include "errors/ft_check_parameters.c"
 #include "errors/ft_flood_fill.c"*/
-
 
 #include "so_long.h"
 
