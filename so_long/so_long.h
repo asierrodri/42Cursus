@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:45:05 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 19:36:15 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/13 20:16:36 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@
 # include <stdio.h>
 
 # include "minilibx/mlx.h"
+
+typedef struct s_enemy
+{
+	unsigned int	x;
+	unsigned int	y;
+}	t_enemy;
 
 typedef struct s_imgs
 {
@@ -48,10 +54,9 @@ typedef struct s_game
 	int		exit;
 	int		beginx;
 	int		beginy;
-	int		enemyx;
-	int		enemyy;
 	int		collectible;
 	int		move;
+	int		*flag;
 	t_imgs	imgs;
 }	t_game;
 
@@ -82,13 +87,14 @@ void			ft_move_down(t_game *game);
 void			ft_move_right(t_game *game);
 void			ft_move_left(t_game *game);
 int				ft_key(int keycode, t_game *game);
-int				ft_move_enemy(t_game *game);
+int				ft_loops(t_game *game);
 
 //game
 void			ft_get_images(t_game *game);
 void			ft_print_game(t_game *game);
 void			ft_start_game(t_game *game);
 void			ft_mlx_xpm_file_to_img(void	**ptr, char *dir, t_game *game);
+void			ft_enemy_pos(t_game *game, t_enemy *enemy);
 
 //core
 int				ft_open_map(t_game *game);

@@ -6,7 +6,7 @@
 #    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:14:23 by asirodri          #+#    #+#              #
-#    Updated: 2023/04/06 20:27:11 by asirodri         ###   ########.fr        #
+#    Updated: 2023/04/13 19:48:23 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ GAME  =  so_long.c 						\
 		 game/ft_start_game.c			\
 		 game/ft_movement.c				\
 		 game/ft_move_enemy.c			\
+		 game/ft_enemy_pos.c			\
 
 ERRORS  = errors/ft_check_ber.c 		\
 		 errors/ft_check_parameters.c 	\
@@ -64,7 +65,6 @@ all:        $(NAME)
 $(NAME): $(OBJS)
 	@printf $(UP)$(CUT)
 	@echo $(Y)Compiling [$(NAME)]...$(X)
-	@ar -r $(NAME) $(OBJS)
 	@echo $(G)Finished [$(NAME)]$(X)
 	make  -C $(MLX)
 	@$(CC) $(CFLAGS) $(LMLX) $(MLX)/libmlx.a -o $@ $^

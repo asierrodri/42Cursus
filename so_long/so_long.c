@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:44:54 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 16:46:08 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/13 18:46:31 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int	ft_open_map(t_game *game)
 
 int	so_long(t_game *game, char *file)
 {
+
 	game->file = file;
 	if (ft_check_ber(game) == 1)
 		exit(1);

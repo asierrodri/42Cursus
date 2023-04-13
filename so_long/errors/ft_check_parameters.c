@@ -71,18 +71,15 @@ void	ft_save_enemy(t_game *game)
 	unsigned int	y;
 	unsigned int	x;
 
-	y = 1;
+	y = 0;
+	game->enemy = 0;
 	while (game->map[y])
 	{
-		x = 1;
-		while (x != game->x)
+		x = 0;
+		while (game->map[y][x])
 		{
 			if (game->map[y][x] == 'X')
-			{
-				game->enemyx = x;
-				game->enemyy = y;
-				return ;
-			}
+				game->enemy++;
 			x++;
 		}
 		y++;
