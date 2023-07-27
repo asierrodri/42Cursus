@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 18:35:11 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/13 20:21:42 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/04/18 19:35:47 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_close(t_game *game)
 
 int	ft_key(int keycode, t_game *game)
 {
+	if (keycode)
+		mlx_loop_hook(game->imgs.mlx, ft_loops, game);
 	if (keycode == 13 || keycode == 126)
 		ft_move_up(game);
 	if (keycode == 1 || keycode == 125)
@@ -59,6 +61,5 @@ void	ft_start_game(t_game *game)
 		(game->y + 0.8) * 32, 2110411, ft_itoa(game->move));
 	mlx_key_hook(game->imgs.window, ft_key, game);
 	mlx_hook(game->imgs.window, 17, 17, ft_close, game);
-	mlx_loop_hook(game->imgs.mlx, ft_loops, game);
 	mlx_loop(game->imgs.mlx);
 }

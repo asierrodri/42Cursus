@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:45:05 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/13 20:16:36 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/07/13 19:43:09 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void			ft_save_player(t_game *game);
 void			ft_save_enemy(t_game *game);
 int				ft_flood_fill(t_game *game);
 int				ft_check_collectible(t_game *game);
+int				ft_new_line(char *line);
 
 //movements
 void			ft_move_up(t_game *game);
@@ -98,6 +99,6 @@ void			ft_enemy_pos(t_game *game, t_enemy *enemy);
 
 //core
 int				ft_open_map(t_game *game);
-int				so_long(t_game *game, char *file);
+int				so_long(t_game *game);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:14:23 by asirodri          #+#    #+#              #
-#    Updated: 2023/04/13 19:48:23 by asirodri         ###   ########.fr        #
+#    Updated: 2023/07/13 19:45:08 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ ERRORS  = errors/ft_check_ber.c 		\
 		 errors/ft_check_rectangle.c	\
 		 errors/ft_check_limits.c		\
 		 errors/ft_check_collectible.c	\
+		 errors/ft_new_line.c			\
+
 
 UTILS  = utils/ft_memcpy.c 				\
 		 utils/ft_read.c 				\
