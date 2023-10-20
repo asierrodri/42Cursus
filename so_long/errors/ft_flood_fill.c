@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 17:46:53 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 14:23:03 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 20:34:38 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,7 @@ int	ft_flood_fill(t_game *game)
 
 	flag = 0;
 	if (fill(game, game->beginx, game->beginy, flag) == 0)
-	{	
-		free(game->map2);
 		return (1);
-	}
 	else
 		return (0);
 }

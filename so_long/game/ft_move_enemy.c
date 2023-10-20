@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 17:10:09 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/18 19:04:19 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:50:18 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_rigth(t_game *game, t_enemy *enemy, int x)
 		game->flag[x] = 1;
 	}
 	if (right == 'P')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	return (0);
 }
 
@@ -46,7 +46,7 @@ int	ft_left(t_game *game, t_enemy *enemy, int x)
 	if (left != '0')
 		game->flag[x] = 0;
 	if (left == 'P')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	return (0);
 }
 
@@ -68,10 +68,8 @@ int	ft_move_enemy(t_game *game, t_enemy *enemy)
 
 int	ft_loops(t_game *game)
 {
-	t_enemy	*enemy;
-
-	enemy = malloc((sizeof (int)) * game->enemy * 2);
-	ft_enemy_pos(game, enemy);
-	ft_move_enemy(game, enemy);
+	game->enemys = malloc((sizeof (int)) * game->enemy * 2);
+	ft_enemy_pos(game, game->enemys);
+	ft_move_enemy(game, game->enemys);
 	return (0);
 }

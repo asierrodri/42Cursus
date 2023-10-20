@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:50:48 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 17:37:23 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:50:37 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	ft_move_up(t_game *game)
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	else if (next == 'E' && game->collectible == 0)
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	ft_print_game(game);
 }
 
@@ -52,9 +52,9 @@ void	ft_move_down(t_game *game)
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	if (next == 'E' && game->collectible == 0)
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	ft_print_game(game);
 }
 
@@ -76,9 +76,9 @@ void	ft_move_right(t_game *game)
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	if (next == 'E' && game->collectible == 0)
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	ft_print_game(game);
 }
 
@@ -100,8 +100,8 @@ void	ft_move_left(t_game *game)
 	}
 	mlx_clear_window(game->imgs.mlx, game->imgs.window);
 	if (next == 'X')
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	if (next == 'E' && game->collectible == 0)
-		exit (mlx_destroy_window(game->imgs.mlx, game->imgs.window));
+		ft_close(game);
 	ft_print_game(game);
 }

@@ -6,23 +6,9 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:44:54 by asirodri          #+#    #+#             */
-/*   Updated: 2023/07/27 20:03:05 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:43:11 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include "utils/ft_read.c"
-#include "utils/ft_split.c"
-#include "utils/ft_strdup.c"
-#include "utils/ft_strjoin.c"
-#include "utils/ft_strlen.c"
-#include "utils/ft_substr.c"
-#include "utils/ft_memcpy.c"
-#include "errors/ft_check_ber.c"
-#include "errors/ft_check_rectangle.c"
-#include "errors/ft_check_errors.c"
-#include "errors/ft_check_limits.c"
-#include "errors/ft_check_parameters.c"
-#include "errors/ft_flood_fill.c"*/
 
 #include "so_long.h"
 
@@ -62,7 +48,11 @@ int	so_long(t_game *game)
 	if (ft_open_map(game) != 0)
 		return (1);
 	if (ft_check_errors(game) != 0)
+	{
+		ft_free(game->map, game);
+		ft_free(game->map2, game);
 		return (2);
+	}
 	else
 		ft_start_game(game);
 	return (0);
@@ -76,8 +66,7 @@ int	main(int argc, char **argv)
 	{
 		game.file = argv[1];
 		if (so_long(&game) != 0)
-			return (1); //voy a tener que freezear
+			return (1);
 	}
-	else
-		return (0);
+	return (0);
 }

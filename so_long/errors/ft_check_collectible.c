@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:59:33 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/06 19:38:04 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:39:23 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ int	ft_check_collectible(t_game *game)
 		{
 			if (game->map2[y][x] == 'C')
 			{
-				free(game->map2);
+				ft_free(game->map2, game);
 				return (1);
 			}
 			x++;
 		}
 		y++;
 	}
-	free(game->map2);
+	ft_free(game->map2, game);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:45:05 by asirodri          #+#    #+#             */
-/*   Updated: 2023/07/13 19:43:09 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:44:13 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,20 +44,21 @@ typedef struct s_imgs
 
 typedef struct s_game
 {
-	char	**map;
-	char	**map2;
-	char	*file;
+	char				**map;
+	char				**map2;
+	char				*file;
 	unsigned int		y;
 	unsigned int		x;
-	int		player;
-	int		enemy;
-	int		exit;
-	int		beginx;
-	int		beginy;
-	int		collectible;
-	int		move;
-	int		*flag;
-	t_imgs	imgs;
+	int					player;
+	int					enemy;
+	int					exit;
+	int					beginx;
+	int					beginy;
+	int					collectible;
+	int					move;
+	int					*flag;
+	t_imgs				imgs;
+	t_enemy				*enemys;
 }	t_game;
 
 //utils
@@ -96,6 +97,7 @@ void			ft_print_game(t_game *game);
 void			ft_start_game(t_game *game);
 void			ft_mlx_xpm_file_to_img(void	**ptr, char *dir, t_game *game);
 void			ft_enemy_pos(t_game *game, t_enemy *enemy);
+void			ft_free(char **map, t_game *game);
 
 //core
 int				ft_open_map(t_game *game);

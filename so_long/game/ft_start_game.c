@@ -6,15 +6,37 @@
 /*   By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 18:35:11 by asirodri          #+#    #+#             */
-/*   Updated: 2023/04/18 19:35:47 by asirodri         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:37:25 by asirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
+void	ft_free(char **map, t_game *game)
+{
+	int	i;
+
+	i = game->y;
+	while (i > 0)
+	{
+		free(map[i]);
+		i--;
+	}
+	map = NULL;
+	free(map);
+}
+
 int	ft_close(t_game *game)
 {
-	exit (mlx_destroy_image(game->imgs.mlx, game->imgs.window));
+	ft_free(game->map, game);
+	free(game->flag);
+	free(game->enemys);
+	if (game->imgs.mlx && game->imgs.window)
+	{
+		mlx_clear_window(game->imgs.mlx, game->imgs.window);
+		mlx_destroy_window(game->imgs.mlx, game->imgs.window);
+	}
+	exit (0);
 }
 
 int	ft_key(int keycode, t_game *game)
