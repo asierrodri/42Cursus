@@ -6,7 +6,7 @@
 #    By: asirodri <asirodri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 19:14:23 by asirodri          #+#    #+#              #
-#    Updated: 2023/07/13 19:45:08 by asirodri         ###   ########.fr        #
+#    Updated: 2023/11/16 17:46:34 by asirodri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ GAME  =  so_long.c 						\
 		 game/ft_movement.c				\
 		 game/ft_move_enemy.c			\
 		 game/ft_enemy_pos.c			\
+		 
 
 ERRORS  = errors/ft_check_ber.c 		\
 		 errors/ft_check_parameters.c 	\
